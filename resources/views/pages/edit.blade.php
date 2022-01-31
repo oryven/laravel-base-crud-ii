@@ -1,4 +1,4 @@
-@extends('layouts.main-layout')
+@extends('layout.main-layout')
 @section('content')
     
     <h1>Edit movie</h1>
@@ -26,11 +26,11 @@
         <input type="text" name="author" placeholder="author" value="{{ $comic -> author }}"><br>
 
         <label for="pages">Pages:</label>
-        <input type="number" name="pages" placeholder="pages" value="{{ $comic -> author }}"><br>
+        <input type="number" name="pages" placeholder="pages" value="{{ $comic -> pages }}"><br>
 
         <label for="release_date">Release date:</label>
         <input type="date" name="release_date" value="{{ $comic -> release_date }}"><br>
         
-        <input type="submit" value="UPDATE">
+        <input type="submit" value="update">
     </form>
 @endsection

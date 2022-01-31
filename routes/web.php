@@ -19,5 +19,5 @@ Route::get('comic/{id}', 'HomeController@comic')->name('comic');
 Route::get('home/create', 'HomeController@create')->name('create');
 Route::post('home/create', 'HomeController@store')->name('store');
 
-Route::get('home/edit', 'HomeController@create')->name('edit');
+Route::get('home/edit{id}', 'HomeController@edit')->name('edit');
 Route::post('home/update{id}', 'HomeController@update')->name('update');

@@ -39,6 +39,12 @@ class HomeController extends Controller
         return redirect() -> route('home');
     }
 
+    public function edit($id) {
+
+        $comic = comic::findOrFail($id);
+        return view('pages.edit', compact('comic'));
+    }
+
     public function update(Request $request, $id) {
 
         $data = $request -> validate ([
@@ -47,5 +53,9 @@ class HomeController extends Controller
             'pages' => 'required',
             'release_date' => 'required | date',
         ]);
+
+        $comic = comic::findOrFail($id);
+        $comic -> update($data);
+        return redirect() -> route('home');
     }
 }
