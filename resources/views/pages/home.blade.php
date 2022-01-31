@@ -10,6 +10,7 @@
     @foreach ($Comics as $comic)
     <li>
         <a href="{{ route('comic', $comic->id)}}">{{$comic -> title }}, {{$comic -> author }}, {{$comic -> pages}} {{$comic -> release_date}}</a>
+        <a href="{{ route('edit', $comic->id)}}"> - EDIT - </a>
     </li>      
     @endforeach
 </ul>

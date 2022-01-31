@@ -39,4 +39,13 @@ class HomeController extends Controller
         return redirect() -> route('home');
     }
 
+    public function update(Request $request, $id) {
+
+        $data = $request -> validate ([
+            'title' => 'required | string',
+            'author' => 'required | string',
+            'pages' => 'required',
+            'release_date' => 'required | date',
+        ]);
+    }
 }
