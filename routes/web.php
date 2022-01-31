@@ -21,3 +21,5 @@ Route::post('home/create', 'HomeController@store')->name('store');
 
 Route::get('home/edit{id}', 'HomeController@edit')->name('edit');
 Route::post('home/update{id}', 'HomeController@update')->name('update');
+
+Route::get('home/delete{id}', 'HomeController@delete')->name('delete');
