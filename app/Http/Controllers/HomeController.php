@@ -62,6 +62,7 @@ class HomeController extends Controller
     public function delete($id) {
 
         $comic = comic::findOrFail($id);
-        return view('pages.home');
+        $comic -> delete();
+        return redirect() -> route('home');
     }
 }
